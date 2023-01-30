@@ -1,0 +1,32 @@
+body {
+    background-color: #B6C5B8;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #2B2118;
+    color: #A8763E;
+    font-size: 2rem;
+    text-align: center;
+    padding: 5%;
+}
+
+main {
+    margin: 5%;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    margin-top: auto;
+    background-color: #2B2118;
+    text-align: center;
+    padding: 2%;
+}
+
+footer a {
+    color: #A8763E;
+    text-decoration: none;
+}
