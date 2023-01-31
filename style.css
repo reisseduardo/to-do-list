@@ -2,6 +2,8 @@ body {
     background-color: #B6C5B8;
     font-family: 'Work Sans', sans-serif;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -12,8 +14,26 @@ header {
     padding: 5%;
 }
 
-main {
+main {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 5%;
+    padding: 2%;
+}
+
+.newTask {
+    margin: 5%;
+    padding: 2%;
+    border: 0.2rem solid #2B2118;
+}
+
+.task-item {
+    margin: 5%;
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
