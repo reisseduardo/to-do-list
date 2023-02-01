@@ -35,6 +35,7 @@ main {
 }
 .completed {
     text-decoration: line-through;
+    color: #6F1A07;
 }
 
 footer {
