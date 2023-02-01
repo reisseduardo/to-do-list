@@ -16,7 +16,7 @@ const handleAddTask = () => {
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.onclick = function () {
+    checkbox.onclick = () => {
         if (checkbox.checked) {
             taskText.classList.add("completed");
         }else{
@@ -30,6 +30,9 @@ const handleAddTask = () => {
     const label = document.createTextNode("Remover");
     deleteItem.appendChild(label)
     deleteItem.classList.add("del")
+    deleteItem.onclick = () => {
+        userText.remove();
+    }
 
     userTask.appendChild(userText);
     userText.appendChild(checkbox);

@@ -18,13 +18,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2%;
+    padding: 0.2%;
 }
 
 .newTask {
-    margin: 5%;
-    padding: 2%;
-    border: 0.2rem solid #2B2118;
+    margin: 2%;
+    padding: 2%;    
 }
 
 .userTask li{
@@ -32,6 +31,7 @@ main {
     padding: 2%;
     text-align: center;
     justify-content: space-between;
+    align-items: center;
 }
 .completed {
     text-decoration: line-through;
