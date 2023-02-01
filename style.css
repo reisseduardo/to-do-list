@@ -14,11 +14,10 @@ header {
     padding: 5%;
 }
 
-main {    
+main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5%;
     padding: 2%;
 }
 
@@ -28,12 +27,14 @@ main {
     border: 0.2rem solid #2B2118;
 }
 
-.task-item {
-    margin: 5%;
+.userTask li{
+    display: flex;   
     padding: 2%;
     text-align: center;
-    display: flex;
     justify-content: space-between;
+}
+.completed {
+    text-decoration: line-through;
 }
 
 footer {

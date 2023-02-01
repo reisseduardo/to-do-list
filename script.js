@@ -4,29 +4,40 @@ const userTask = document.querySelector(".userTask");
 
 
 const validateInput = () => input.value.trim().length > 0;
-const handleAddTask = () => {
-    const inputIsValid = validateInput();    
 
-    if (!inputIsValid){
+const handleAddTask = () => {
+    const inputIsValid = validateInput();
+
+    if (!inputIsValid) {
         return alert("Digite sua tarefa.");
     }
-    const taskItem = document.createElement("ul");
-    taskItem.classList.add("task-item");
 
     const userText = document.createElement("li");
-    userText.innerText = input.value;
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.onclick = function () {
+        if (checkbox.checked) {
+            taskText.classList.add("completed");
+        }else{
+            taskText.classList.remove("completed");
+        }
+    }
+    const taskText = document.createElement("p");
+    taskText.innerText = input.value;
 
     const deleteItem = document.createElement("button");
     const label = document.createTextNode("Remover");
     deleteItem.appendChild(label)
     deleteItem.classList.add("del")
 
-    taskItem.appendChild(userText);
-    taskItem.appendChild(deleteItem);
+    userTask.appendChild(userText);
+    userText.appendChild(checkbox);
+    userText.appendChild(taskText);
+    userText.appendChild(deleteItem);
 
-    userTask.appendChild(taskItem);
 
+    input.value = "";
 }
 
 addTaskButton.addEventListener("click", () => handleAddTask());
-
