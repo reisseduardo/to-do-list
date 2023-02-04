@@ -1,7 +1,7 @@
 const input = document.querySelector("#userInput");
 const addTaskButton = document.querySelector("#addTask");
 const userTask = document.querySelector(".userTask");
-
+const tasks = []
 
 const validateInput = () => input.value.trim().length > 0;
 
@@ -39,8 +39,14 @@ const handleAddTask = () => {
     userText.appendChild(taskText);
     userText.appendChild(deleteItem);
 
+    const task = {
+        "task": input.value
+    }
+    tasks.push(task);
+    localStorage.setItem("task", JSON.stringify(tasks))
 
     input.value = "";
+    
 }
 
 addTaskButton.addEventListener("click", () => handleAddTask());
