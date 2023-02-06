@@ -1,9 +1,15 @@
 const input = document.querySelector("#userInput");
 const addTaskButton = document.querySelector("#addTask");
 const userTask = document.querySelector(".userTask");
-const tasks = []
+const tasks = JSON.parse(localStorage.getItem("task")) || []
 
-const validateInput = () => input.value.trim().length > 0;
+tasks.forEach((e) => {
+   console.log(tasks)
+})
+
+function validateInput() {
+    return input.value.trim().length > 0;
+}
 
 const handleAddTask = () => {
     const inputIsValid = validateInput();
@@ -19,7 +25,7 @@ const handleAddTask = () => {
     checkbox.onclick = () => {
         if (checkbox.checked) {
             taskText.classList.add("completed");
-        }else{
+        } else {
             taskText.classList.remove("completed");
         }
     }
@@ -39,14 +45,13 @@ const handleAddTask = () => {
     userText.appendChild(taskText);
     userText.appendChild(deleteItem);
 
-    const task = {
-        "task": input.value
-    }
+    const task = input.value
+
     tasks.push(task);
     localStorage.setItem("task", JSON.stringify(tasks))
 
     input.value = "";
-    
+
 }
 
 addTaskButton.addEventListener("click", () => handleAddTask());
